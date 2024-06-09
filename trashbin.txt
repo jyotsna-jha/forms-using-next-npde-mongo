@@ -1,0 +1,235 @@
+app.get('/api/home', (req, res) => {
+    // Route handler for GET requests
+    res.status(200).json({ message: 'Welcome to the home API endpoint!' });
+  });
+ 
+ res.send({ message: 'Form received!' });
+});
+ 
+  res.json({"hello":"frontend"})
+
+ 
+ axios.post('/api/home')
+  .then(res=>console.log("Registered successfully!!"))
+  .catch(err=>console.log(err));
+
+};
+
+ 
+  const validationErrors = validateForm();
+
+ 
+if (Object.keys(validationErrors).length === 0) {
+    // Form is valid, proceed with signup logic
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Password:', password);
+  } else {
+    // Form has errors, update the state with the validation errors
+    setErrors(validationErrors);
+  }
+
+  const values = {
+    name: name,
+    email: email,
+    password: password,
+  };
+  
+ 
+
+export default function Contact() {
+
+  return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+<form className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg " >
+  <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+  <div>
+    <label htmlFor="name"  className="block text-gray-700">Name</label>
+    <input type="text" 
+    id="name"
+    name="name"
+    placeholder="Your Name"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+  <div>
+    <label htmlFor="email"  className="block text-gray-700">Email</label>
+    <input type="text" 
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+  <div>
+    <label htmlFor="email"  className="block text-gray-700">Email</label>
+    <input type="text" 
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+  <div>
+    <label htmlFor="contactNumber" className="block text-gray-700">Contact Number</label>
+    <input type="tel"
+    id="contactNumber"
+    name="contactNumber"
+    placeholder="Your Contact Number"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"     />
+  </div>
+  <div>
+    <label htmlFor="message" className="block text-gray-700">Your Message</label>
+    <textarea name="message" id="message"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outile-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    rows="4"
+    placeholder="Your Text"
+    ></textarea>
+  </div>
+  <button type="submit" className="w-[30%] p-2 bg-blue-500 text-[white] border-gray-300 rounded mt-1 focus:outline-none focus:ring-blue-500 focus:border-transparent transition duration-200 transform hover:bg-blue-600 hover:scale-105">
+    Submit
+  </button>
+  </form>
+    </div>
+  );
+}
+
+ 
+import { useState } from "react";
+import axios from 'axios';
+ 
+ const [FormData,setFormData]=useState({
+        name:'',
+        email:'',
+        contactNumber:'',
+        message:''
+
+    });
+ 
+onSubmit={handleSubmit}
+ 
+const handleSubmit=async(e)=>{
+        e.preventDefault();
+        try{
+            await axios.post('api/contact',FormData);
+
+        }catch(error){
+            console.error('Error submitting form:',err);
+            alert('failed to submit form');
+        }
+    }
+
+    const handleChange=(e)=>{
+        setFormData({...FormData,[e.target.name]:e.target.value});
+    }
+ 
+import Image from "next/image";
+
+ 
+contac
+ 
+import Image from "next/image";
+
+ 
+return (
+    <div className="flex items-center justify-center min-h-screen bg-gray-100">
+<form className="w-full max-w-lg bg-white p-8 rounded-lg shadow-lg">
+  <h2 className="text-2xl font-bold mb-6 text-center">Contact Us</h2>
+  <div>
+    <label htmlFor="name"  className="block text-gray-700">Name</label>
+    <input type="text" 
+    id="name"
+    name="name"
+    placeholder="Your Name"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+  <div>
+    <label htmlFor="email"  className="block text-gray-700">Email</label>
+    <input type="text" 
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+
+  <div>
+    <label htmlFor="email"  className="block text-gray-700">Email</label>
+    <input type="text" 
+    id="email"
+    name="email"
+    placeholder="Your Email"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    />
+  </div>
+  <div>
+    <label htmlFor="contactNumber" className="block text-gray-700">Contact Number</label>
+    <input type="tel"
+    id="contactNumber"
+    name="contactNumber"
+    placeholder="Your Contact Number"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"     />
+  </div>
+
+  <div>
+    <label htmlFor="message" className="block text-gray-700">Your Message</label>
+    <textarea name="message" id="message"
+    className="w-full p-2 bg-slate-100 border-gray-300 rounded mt-1 focus:outile-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+    rows="4"
+    placeholder="Your Text"
+    ></textarea>
+  </div>
+
+  <button type="submit" className="w-[30%] p-2 bg-blue-500 text-[white] border-gray-300 rounded mt-1 focus:outline-none focus:ring-blue-500 focus:border-transparent transition duration-200 transform hover:bg-blue-600 hover:scale-105">
+    Submit
+  </button>
+  </form>
+    </div>
+  );
+ 
+    placeholder="your textt"
+
+ 
+<div>
+    
+  </div>
+ 
+text
+ 
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+ 
+<form>
+      
+    </form>
+   
+ 
